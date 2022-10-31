@@ -1,0 +1,83 @@
+DAY 01 NOTES
+============
+
+Install VSCode and NodeJS before proceeding.
+
+ReactJS starting tutorials:
+
+* Pure React front-end (skip Adding Time Travel and everything onward from that point)
+https://reactjs.org/tutorial/tutorial.html
+
+* React JS - React Tutorial for Beginners (comprehensive, but just front-end)
+https://www.youtube.com/watch?v=Ke90Tje7VS0
+
+* CRUD with React + NodeJS + MySQL (parts 1,2,3) IMPLEMENT IT or the next playlist
+https://www.youtube.com/watch?v=T8mqZZ0r-RA
+https://www.youtube.com/watch?v=3YrOOia3-mo
+https://www.youtube.com/watch?v=_S2GKnFpdtE
+
+* PLAYLIST: Full Stack Web Development Course [1] | ReactJS, NodeJS, Express, MySQL
+https://www.youtube.com/watch?v=Hl7diL7SFw8&list=PLpPqplz6dKxUaZ630TY1BFIo5nP-_x-nL
+
+# Deep Dive Into Modern Web Development - Full Stack 2021 course
+https://fullstackopen.com/en/#course-contents
+
+
+-- later, some in class, some will be useful for projects --
+
+* Register and Login Tutorial | ReactJS, NodeJS, MySQL - Cookies, Sessions, Hashing
+https://www.youtube.com/watch?v=sTHWNPVNvm8
+
+* Authentication With JWT Tutorial - React, NodeJS | How To
+https://www.youtube.com/watch?v=KgXT63wPMPc
+
+* Protected Routes in ReactJS - React Router Dom
+https://www.youtube.com/watch?v=qnH5KNtRYEI
+
+* ReactJS Pagination Tutorial using React Hooks
+https://www.youtube.com/watch?v=HANSMtDy508
+
+* Context API Tutorial For Beginners - Using React Hooks
+https://www.youtube.com/watch?v=sP7ANcTpJr8
+
+* Search Bar in React Tutorial - Cool Search Filter Tutorial
+https://www.youtube.com/watch?v=x7niho285qs
+
+* React Router Full Tutorial 
+https://www.youtube.com/watch?v=o__czqXJtqk
+React router updated: https://youtu.be/UjHT_NKR_gU
+
+* How to Test In React - React Testing Library + Jest Tutorial
+https://www.youtube.com/watch?v=Vp_76zdHkV8
+
+Food for thought - MongoDB vs MySQL
+https://www.mongodb.com/compare/mongodb-mysql
+
+Learn the MERN Stack - Full Tutorial (MongoDB, Express, React, Node.js)
+https://www.youtube.com/watch?v=7CqJlxBYj-M
+
+AWS DynamoDB Tutorial For Beginners
+https://www.youtube.com/watch?v=2k2GINpO308
+
+** React Developer Tools extention for Chrome
+https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?hl=en
+
+
+
+NOTE 1:
+
+Your system probably has ability to execute PS1 scripts disabled by default.
+It has to enabled globally for some of the tools to work.
+
+To fix this Start PowerShell as Administrator, then execute this command, answer the question "A" for All
+
+Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted
+
+
+NOTE 2 (you should NOT need to do that):
+
+You will need to use this plugin if you're getting errors similar to:
+"XMLHttpRequest cannot load .... No 'Access-Control-Allow-Origin' header is present on the requested resource ..."
+https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf?hl=en
+Related discussion / explanation and alternative solutions:
+https://stackoverflow.com/questions/41497674/access-control-allow-origin-issue-when-api-call-made-from-react-isomorphic-ap

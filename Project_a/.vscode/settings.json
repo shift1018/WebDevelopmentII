@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/8b165df6-f607-4b47-bdea-59c3aa861ab8/AppServices/subscriptions/8b165df6-f607-4b47-bdea-59c3aa861ab8/resourceGroups/FSD04/providers/Microsoft.Web/sites/AppTheResto",
+    "appService.deploySubpath": "theresto"
+}

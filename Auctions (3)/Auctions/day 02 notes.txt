@@ -1,0 +1,148 @@
+DAY 03 NOTES
+============
+
+https://www.restapitutorial.com/httpstatuscodes.html
+
+(select)
+GET /api/articles  -> list of articles
+SEND: nothing
+RECV: array of records
+code: 200
+
+(select)
+GET /api/articles/123 -> get article with id 123
+SEND: nothing
+RECV: one record
+code: 200
+
+(insert)
+POST /api/articles -> create a new record
+SEND: data of one record
+RECV: nothing, or id of the newly created record
+code: 201
+
+(update)
+PUT /api/articles/123 update a record, all fields must be provided (except for the primary key)
+PATCH /api/articles/123 update a record, any fields may be provided (except for the primary key)
+SEND: data for update of one record
+RECV: nothing, or some confirmation e.g. "true"
+code: 200
+
+(delete)
+DELETE /api/articles/123 delete a record
+SEND: nothing
+RECV: nothing, or some confirmation e.g. "true"
+code: 200
+
+
+
+SELECT * FROM users WHERE email="jerry@gmail.com"
+
+WITHOUT AN INDEX on email
+1 000 records -> look at up 1000 (avg 500) to find one
+1 000 000 records -> look at up 1 000 000 (avg 500 000) to find one
+
+
+1024 pages in a phone book
+512
+256
+128
+64
+32
+16
+8
+4
+2
+1
+
+2^10 = 1024
+
+
+
+
+
+React Hooks vs Components
+=========================
+
+
+React Hooks (functional components) vs class Components - which one to use?
+
+https://www.twilio.com/blog/react-choose-functional-components
+https://www.geeksforgeeks.org/differences-between-functional-components-and-class-components-in-react/
+https://reactjs.org/docs/hooks-intro.html
+
+React numeric inputs parametrization:
+https://vlad-ignatov.github.io/react-numeric-input/
+
+
+Auctions exercise
+-----------------
+
+Create two new projects in VSCode: auctions-client and auctions-server.
+
+>> Server
+
+Create a MySQL database 'auctionsdb' and in it create this table:
+
+auctions
+- id INT PK AI
+- sellerEmail VC(320) // required, must look like a valid email
+- itemName VC(100)  // required, 2-100 characters, only uppercase, lowercase, digits, spaces and: ./,_()-
+- itemDescription VC(10000) // required, 2-10000 characters, textarea, Advanced: rich text editor WYSIWYG
+- lastBidPrice decimal // required, 0 or higher
+- lastBidderEmail VC(320) // may be NULL (initially)
+
+Note: all columns are not null unless otherwise specified
+
+Design an implement an RESTful API only the necessary calls, e.g.:
+GET /api/auctions
+GET /api/auction/123 (if needed)
+POST /api/auctions
+PATCH /api/auctions/123
+
+Advanced: add validation for data consistency to the API.
+
+>> Client
+
+Start with a table view of all auctions and a button to add a new auction.
+
+Your application should present the user with 3 views (you may implement them as 2 or 3 Routes):
+- view a list of all auctions (as an HTML table, with a link to "bid" on it)    /
+- bid on an auction (by clicking on an item in the list of all auctions)        /Bid or /Bid/123
+- add an auction                                                                /New or /Add
+
+* Adding an auction
+- a set of inputs that creates a new auction with the following fields: Seller Email, Item Name, Item Description (textarea), Initial Price (becomes lastPrice in the database).
+- submission must verify values as specified above in comments of table auction.
+- on successful submission a new record is craeted with lastBidder set to null.
+
+* Bidding on one specific aution
+- displays information about the auction: Id, Seller's Email, Item Name, Item Description (multiline content, rich text with formatting), Last Price.
+- a set of inputs that allows user to enter a new bid, bidder email and submit
+- on submission the application must verify that the new bid is higher than the old bid, otherwise it must display an error and show the form again
+- on successful submission an auction record is updated with new lastPrice (the new bid) and lastBidderEmail
+
+Other notes:
+- Basic CSS is required at the very least to center the contents of each page and make it visually tolerable. 
+
+
+
+Other
+-----
+
+Validate emails and other strings
+https://www.npmjs.com/package/validator
+
+https://www.delftstack.com/howto/react/react-router-params/
+
+Sequelize tutorial
+https://zetcode.com/javascript/sequelize/
+
+
+
+
+
+
+
+
+

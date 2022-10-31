@@ -1,0 +1,27 @@
+.App {
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 30px;
+}
+
+.btn{
+  width:40%;
+}
+
+th{
+  color:rgb(149, 88, 234);
+}
+
+.form-control{
+  width: 30%;
+}
+
+#createAuction{
+  margin:30px;
+  width:30%;
+}
+
+.form-label{
+  color:rgb(13, 80, 11);
+  opacity:70%;
+}

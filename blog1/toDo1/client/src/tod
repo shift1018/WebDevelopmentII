@@ -1,0 +1,48 @@
+MIDTERM
+=======
+
+You will create a ToDo app.
+You may create directory "MidtermTodo" (or "Midterm") with "server" and "client" directories/projects inside of it.
+
+Users must be able to register with email and password to access their own todo lists.
+You need to implement register/login/logout.
+Once a user account is created it can not be changed.
+
+Todo list is essentially a CRUD.
+
+There must be a separate route for the list of Todos
+and a separate route(s) for add/edit/delete (how many and how they're structured is up to you).
+
+All validation is done in the front end only, except for the minimum requirements:
+- user registration where email must look like an (on the backend only) email and it is not registered yet
+- password must be 6-50 characters long.
+The same requirements are verified in the front end.
+
+Other front-end only validation for todo add/update:
+- task must be 1-100 characters long
+- due date must be a valid date (input type date must be used to show a date picker)
+- isDone is handled either as a checkbox or two radio buttons so no validation necessary
+
+<!-- users table:
+- id INT PK AI
+- email VC(360) UNIQUE NOT NULL
+- password VC(100) NOT NULL
+
+todos table:
+- id INT PK AI
+- ownerId INT FK linked to users table's id
+- task VC(100) NOT NULL
+- dueDate DATE NOT NULL
+- isDone INT NOT NULL (0 pending, 1 done) (you may also use an ENUM if you like) -->
+
+
+Basic CSS must be used to make the app look palletable.
+
+For full marks your solution should use JWT tokens.
+
+WHAT TO SUBMIT:
+* Delete the directories 'node_modules' with npm libraries from _both_ server and client.
+* You MUST include screenshots showing the functioning of registration, login, list of todos, add/edit/delete of a todo. Save the screenshots in the same directory as the copy of your project under 'screenshots' subdirectory.
+* Export the database and save it in the main directory of the copy of your project.
+* ZIP-up the copy and submit. This must include all code (except for the npm libraries), screenshots, and database export.
+
